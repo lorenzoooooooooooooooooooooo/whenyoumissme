@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migliora la tua giornata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: pink;
+            background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23C8A2C8"%3E%3Cpath d="M50 15C44.2 15 38.8 17.6 35 22C31.2 17.6 25.8 15 20 15C8.9 15 0 24.4 0 35.5C0 48.3 20.6 63.7 35 80C49.4 63.7 70 48.3 70 35.5C70 24.4 61.1 15 50 15Z"/%3E%3C/svg%3E');
+            background-size: 50px 50px;
+            animation: movimentoCuori 5s linear infinite;
+        }
+
+        @keyframes movimentoCuori {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .frase {
+            margin-top: 50px;
+            font-size: 50px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>LORENZO È SEMPRE CON TE</h1>
+    <button onclick="mostraFrase()">MIGLIORO LA TUA GIORNATA ANCHE QUANDO NON POSSIAMO PARLARE</button>
+    <div class="frase" id="frase"></div>
+
+    <script>
+        // Inserisci qui le tue frasi
+        const frasi = [
+            "BUONGIORNO COTOLETTA 💜 ",
+            "TI VOGLIO TANTO BENE!!",
+            "FATTI ROSSA PLS!!",
+            "SARÒ SEMPRE FIERO DI TE, RICORDATELO!!",
+            "SEI GAY (TVB)!!",
+            "MI MANCHI TANTISSIMO!!",
+             "SEI SPECIALE!!", 
+       "BUONANOTE COTOLETTA 💜 ",
+            ];
+
+        function mostraFrase() {
+            // Seleziona una frase casuale dall'array
+            const fraseCasuale = frasi[Math.floor(Math.random() * frasi.length)];
+            
+            // Mostra la frase nel div con id "frase"
+            document.getElementById('frase').textContent = fraseCasuale;
+        }
+    </script>
+</body>
+</html>
